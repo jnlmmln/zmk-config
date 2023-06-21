@@ -21,7 +21,7 @@
             if-layers = <LOWER RAISE>;
             then-layer = <BOTH>;
           };
-        }
+        };
         keymap {
                 compatible = "zmk,keymap";
 
