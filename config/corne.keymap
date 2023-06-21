@@ -29,13 +29,15 @@
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     Q     |     W     |     E     |     R     |     T     |     |     Y     |     U     |     I     |     O     |     P     |
-      &kp Q       &kp W       &kp E       &kp R       &kp T             &kp Y       &kp U       &kp I       &kp O       &kp P
+&kp ESC      &kp Q       &kp W       &kp E       &kp R       &kp T             &kp Y       &kp U       &kp I       &kp O       &kp P &kp ESC
 
 //  |     A     |     S     |     D     |     F     |     G     |     |     H     |     J     |     K     |     L     |     ;     |
-      &kp A       &kp S       &kp D       &kp F       &kp G             &kp H       &kp J       &kp K       &kp L       &kp SEMI
+ &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G             &kp H       &kp J       &kp K       &kp L       &kp SEMI &kp ESC
+
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .     |     /     |
-      &kp Z       &kp X       &kp C       &kp V       &kp B             &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH
+ &kp ESC     &kp Z       &kp X       &kp C       &kp V       &kp B             &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH &kp ESC
+
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
                           &mt LALT ESC &lt LEFT BSPC &mt LCTRL SPACE     &mt RSHFT RET &lt RIGHT TAB &mt RGUI DEL
@@ -46,13 +48,16 @@
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5            &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+  &kp ESC    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5            &kp N6      &kp N7      &kp N8      &kp N9      &kp N0 &kp ESC
+
 
 //  |     A     |     S     |     D     |     F     |     G     |     |     -/_   |     =/+   |     [/{   |     ]/}   |     '/"   |
-      &trans  &trans  &trans  &trans  &trans              &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT
+  &kp ESC  &trans  &trans  &trans  &trans  &trans              &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT &kp ESC
+
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-      &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
+
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
@@ -64,13 +69,13 @@
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-      &kp C_BRI_DN  &kp C_BRI_UP  &kp N3      &kp N4      &kp N5            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP
+  &kp ESC     &kp C_BRI_DN  &kp C_BRI_UP  &kp N3      &kp N4      &kp N5            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-      &trans  &trans  &trans  &trans  &trans              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp SQT
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-      &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
@@ -81,13 +86,13 @@
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-      &kp C_BRI_DN  &kp C_BRI_UP  &kp N3      &kp N4      &kp N5            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP
+   &kp ESC    &kp C_BRI_DN  &kp C_BRI_UP  &kp N3      &kp N4      &kp N5            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3             &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp SQT
+  &kp ESC  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3             &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-      &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
