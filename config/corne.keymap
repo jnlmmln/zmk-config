@@ -40,7 +40,7 @@
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &mt LALT ESC &lt LEFT BSPC &mt LCTRL SPACE     &mt RSHFT RET &lt RIGHT TAB &mt RGUI DEL
+                          &mt LALT ESC &lt LOWER BSPC &mt LCTRL SPACE     &mt RSHFT RET &lt RAISE TAB &mt RGUI DEL
                   >;
                 };
 
@@ -75,7 +75,7 @@
   &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp trans        &kp trans       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
@@ -92,7 +92,7 @@
   &kp ESC  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3             &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp trans        &kp trans       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
