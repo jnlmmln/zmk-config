@@ -72,7 +72,7 @@
 
 
 //  |     A     |     S     |     D     |     F     |     G     |     |     -/_   |     =/+   |     [/{   |     ]/}   |     '/"   |
-  &kp ESC  &kp de_ae  &kp de_eszett  &kp de_oe  &kp de_ue  &kp euro_sign              &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT &kp ESC
+  &kp ESC  &kp de_ae  &trans  &trans  &trans  &trans              &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT &kp ESC
 
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
