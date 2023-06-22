@@ -40,7 +40,7 @@
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &mt LALT ESC &lt LOWER BSPC &mt LCTRL RET     &mt RSHFT SPACE &lt RAISE TAB &mt RGUI DEL
+                          &mt LALT ESC &lt LOWER BSPC &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT SPACE  &mt RGUI DEL
                   >;
                 };
 
