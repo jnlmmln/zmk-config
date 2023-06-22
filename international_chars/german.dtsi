@@ -3,3 +3,6 @@ ZMK_UNICODE_PAIR(   de_ae,      KP_N0, KP_N2, KP_N2, KP_N8,    KP_N0, KP_N1, KP_
 ZMK_UNICODE_PAIR(   de_oe,      KP_N0, KP_N2, KP_N4, KP_N6,    KP_N0, KP_N2, KP_N1, KP_N4)
 ZMK_UNICODE_PAIR(   de_ue,      KP_N0, KP_N2, KP_N5, KP_N2,    KP_N0, KP_N2, KP_N2, KP_N0)
 ZMK_UNICODE_SINGLE( de_eszett,  KP_N0, KP_N2, KP_N2, KP_N3)
+
+// euro sign
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
