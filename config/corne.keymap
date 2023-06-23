@@ -118,7 +118,7 @@
 
 
 //  |     A     |     S     |     D     |     F     |     G     |     |     -/_   |     =/+   |     [/{   |     ]/}   |     '/"   |
-  &kp ESC  &de_ae  &trans  &trans  &trans  &trans              &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT &kp ESC
+  &kp ESC  &de_ae  &de_eszett  &de_oe  &de_ue  &euro_sign             &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT &kp ESC
 
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
