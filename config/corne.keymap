@@ -8,73 +8,24 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define HOST_OS 2
+#include "../helper.h"
+
 #define DEFAULT   0
 #define LOWER      1
 #define RAISE     2
 #define BOTH       3
 
 / {
-        macros {
-                de_ae: de_ae {
-                        label = "ZM_de_ae";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                        = <&macro_press &kp LALT>
-                        , <&macro_tap &kp N0 &kp N0 &kp E &kp N4>
-                        , <&macro_release &kp LALT>
-                        ;
-                };
-                de_eszett: de_eszett {
-                        label = "ZM_de_eszett";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                        = <&macro_press &kp LALT>
-                        , <&macro_tap &kp N0 &kp N0 &kp D &kp F>
-                        , <&macro_release &kp LALT>
-                        ;
-                };
-                de_oe: de_oe {
-                        label = "ZM_de_oe";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                        = <&macro_press &kp LALT>
-                        , <&macro_tap &kp N0 &kp N0 &kp F &kp N6>
-                        , <&macro_release &kp LALT>
-                        ;
-                };
-                de_ue: de_ue {
-                        label = "ZM_de_ue";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                        = <&macro_press &kp LALT>
-                        , <&macro_tap &kp N0 &kp N0 &kp F &kp C>
-                        , <&macro_release &kp LALT>
-                        ;
-                };
-                euro_sign: euro_sign {
-                        label = "ZM_euro_sign";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                        = <&macro_press &kp LALT>
-                        , <&macro_tap &kp N2 &kp N0 &kp A &kp C>
-                        , <&macro_release &kp LALT>
-                        ;
-                };
-        };
 
         /* German umlauts */
-        //ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
-        //ZMK_UNICODE_PAIR(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
-        //ZMK_UNICODE_PAIR(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
-        //ZMK_UNICODE_SINGLE( de_eszett,  N0, N0,  D,  F)
+        ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+        ZMK_UNICODE_PAIR(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+        ZMK_UNICODE_PAIR(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+        ZMK_UNICODE_SINGLE( de_eszett,  N0, N0,  D,  F)
         
         // euro sign
-        //ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
+        ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
         conditional_layers {
           compatible = "zmk,conditional-layers";
