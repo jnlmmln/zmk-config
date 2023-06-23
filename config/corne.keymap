@@ -25,12 +25,58 @@
                         , <&macro_release &kp LALT>
                         ;
                 };
+                de_eszett: de_eszett {
+                        label = "ZM_de_eszett";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp N0 &kp N0 &kp E &kp N4>
+                        , <&macro_release &kp LALT>
+                        ;
+                };
+                de_oe: de_oe {
+                        label = "ZM_de_oe";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp N0 &kp N0 &kp C &kp N4>
+                        , <&macro_release &kp LALT>
+                        ;
+                };
+                de_ue: de_ue {
+                        label = "ZM_de_ue";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>
+                        , <&macro_release &kp LALT>
+                        ;
+                };
+                euro_sign: euro_sign {
+                        label = "ZM_euro_sign";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp N2 &kp N0 &kp A &kp C>
+                        , <&macro_release &kp LALT>
+                        ;
+                };
         };
         /* German umlauts for Windows-Alt-Codes */
         //ZMK_UNICODE_PAIR(   de_ae,      KP_N0, KP_N2, KP_N2, KP_N8,    KP_N0, KP_N1, KP_N9, KP_N6)
         //ZMK_UNICODE_PAIR(   de_oe,      KP_N0, KP_N2, KP_N4, KP_N6,    KP_N0, KP_N2, KP_N1, KP_N4)
         //ZMK_UNICODE_PAIR(   de_ue,      KP_N0, KP_N2, KP_N5, KP_N2,    KP_N0, KP_N2, KP_N2, KP_N0)
         //ZMK_UNICODE_SINGLE( de_eszett,  KP_N0, KP_N2, KP_N2, KP_N3)
+        
+        /* German umlauts */
+        //ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+        //ZMK_UNICODE_PAIR(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+        //ZMK_UNICODE_PAIR(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+        //ZMK_UNICODE_SINGLE( de_eszett,  N0, N0,  D,  F)
         
         // euro sign
         //ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
