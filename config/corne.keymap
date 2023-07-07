@@ -43,8 +43,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //  |     Q     |     W     |     E     |     R     |     T     |     |     Y     |     U     |     I     |     O     |     P     |
 &kp ESC      &kp Q       &kp W       &kp E       &kp R       &kp T             &kp Y       &kp U       &kp I       &kp O       &kp P &kp ESC
 
-//  |     A     |     S     |     D     |     F     |     G     |     |     H     |     J     |     K     |     L     |     ;     |
- &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G             &kp H       &kp J       &kp K       &kp L       &kp SEMI &kp ESC
+//  |     A     |     S     |     D     |     F     |     G     |     |     H     |     J     |     K     |     L     |     '/"     |
+ &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G             &kp H       &kp J       &kp K       &kp L       &kp SQT &kp ESC
 
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .     |     /     |
@@ -63,12 +63,12 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
   &kp ESC    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5            &kp N6      &kp N7      &kp N8      &kp N9      &kp N0 &kp ESC
 
 
-//  |     A     |     S     |     D     |     F     |     G     |     |     -/_   |     =/+   |     [/{   |     ]/}   |     '/"   |
-  &kp ESC  &de_ae  &de_eszett  &de_oe  &de_ue  &euro_sign             &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SQT &kp ESC
+//  |     A     |     S     |     D     |     F     |     G     |     |     -/_   |     =/+   |     [/{   |     ]/}   |     ;/:   |
+  &kp ESC  &de_ae  &de_eszett  &de_oe  &de_ue  &euro_sign             &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SEMI &kp ESC
 
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp N       &kp M       &kp COMMA   &kp GRAVE   &kp BSLH &kp ESC
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp BSPC       &kp GRAVE       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
@@ -86,8 +86,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
   &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp RGUI &kp ESC
 
-//  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &trans  &trans  &trans  &trans              &trans        &trans       &kp COMMA   &kp GRAVE   &kp RSHFT &kp ESC
+//  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &trans        &trans       &trans   &trans   &kp RSHFT &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
