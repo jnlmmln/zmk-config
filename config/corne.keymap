@@ -26,7 +26,38 @@ ZMK_UNICODE_SINGLE( de_eszett,  N0, N0,  D,  F)
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 / {
-
+        macros {
+                cut: cut {
+                        label = "ZM_cut";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp X>
+                                , <&macro_release &kp LGUI>
+                                ;
+                };
+                copy: copy {
+                        label = "ZM_copy";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp C>
+                                , <&macro_release &kp LGUI>
+                                ;
+                };
+                paste: paste {
+                        label = "ZM_paste";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp V>
+                                , <&macro_release &kp LGUI>
+                                ;
+                };
+        };
         conditional_layers {
           compatible = "zmk,conditional-layers";
           both_layer {
@@ -68,7 +99,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &kp LGUI X  &kp LGUI C  &kp LGUI V  &trans              &kp BSPC       &kp GRAVE       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
+  &kp ESC     &trans  &cut  &copy  &paste  &trans              &kp BSPC       &kp GRAVE       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
