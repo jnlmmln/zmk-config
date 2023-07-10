@@ -68,7 +68,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &mt LGUI X  &mt LGUI C  &mt LGUI V  &trans              &kp BSPC       &kp GRAVE       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
+  &kp ESC     &trans  &kp LGUI X  &kp LGUI C  &kp LGUI V  &trans              &kp BSPC       &kp GRAVE       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
