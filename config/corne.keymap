@@ -83,7 +83,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &mt LGUI ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT BSPC  &mt LALT DEL
+                          &mt LALT ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT BSPC  &mt LGUI DEL
                   >;
                 };
 
