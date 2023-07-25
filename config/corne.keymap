@@ -69,7 +69,16 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 , <&macro_release &kp LGUI>
                                 ;
                 };
-                CTRL_ALT_CMD_MACRO(a, &kp A)
+                macro_a: macro_a {
+                        label = "ZM_macro_a";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL &kp LALT &kp LGUI>
+                                , <&macro_tap &kp A>
+                                , <&macro_release &kp LCTRL &kp LALT &kp LGUI>
+                                ;
+                };
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
