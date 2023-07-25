@@ -25,6 +25,18 @@ ZMK_UNICODE_SINGLE( de_eszett,  N0, N0,  D,  F)
 // euro sign
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
+#define CTRL_ALT_CMD_MACRO(NAME, KEY) \
+        macro_##NAME: macro_##NAME { \
+                label = "ZM_macro_##NAME"; \
+                compatible = "zmk,behavior-macro"; \
+                #binding-cells = <0>; \
+                bindings \
+                        = <&macro_press &kp LCTRL &kp LALT &kp LGUI> \
+                        , <&macro_tap &kp KEY> \
+                        , <&macro_release &kp LCTRL &kp LALT &kp LGUI> \
+                                ; \
+        };
+
 / {
         macros {
                 cut: cut {
@@ -57,6 +69,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 , <&macro_release &kp LGUI>
                                 ;
                 };
+                CTRL_ALT_CMD_MACRO(a, &kp A)
+                CTRL_ALT_CMD_MACRO(s, &kp S)
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
