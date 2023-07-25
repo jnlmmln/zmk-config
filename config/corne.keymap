@@ -69,7 +69,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 , <&macro_release &kp LGUI>
                                 ;
                 };
-                #CTRL_ALT_CMD_MACRO(a, &kp A)
+                CTRL_ALT_CMD_MACRO(a, &kp A)
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
