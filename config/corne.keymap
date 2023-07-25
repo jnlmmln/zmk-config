@@ -37,14 +37,16 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 ; \
         };
 
-#define MACRO(name, keys)                  \
+#define MACRO(name, key)                  \
     name: name##_macro {                   \
         label = #name;                     \
         compatible = "zmk,behavior-macro"; \
         wait-ms = <1>;                     \
         tap-ms = <1>;                      \
         #binding-cells = <0>;              \
-        bindings = <keys>;                 \
+        bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI> \
+                , <&macro_tap &kp key> \
+                , <&macro_release &kp LCTRL &kp LALT &kp LGUI> ; \
     };
 
 / {
@@ -89,19 +91,19 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 , <&macro_release &kp LCTRL &kp LALT &kp LGUI>
                                 ;
                 };
-                MACRO(macro_s, &kp LCTRL &kp LALT &kp LGUI &kp S)
-                MACRO(macro_d, &kp LCTRL &kp LALT &kp LGUI &kp D)
-                MACRO(macro_f, &kp LCTRL &kp LALT &kp LGUI &kp F)
-                MACRO(macro_g, &kp LCTRL &kp LALT &kp LGUI &kp G)
-                MACRO(macro_z, &kp LCTRL &kp LALT &kp LGUI &kp Z)
-                MACRO(macro_x, &kp LCTRL &kp LALT &kp LGUI &kp X)
-                MACRO(macro_c, &kp LCTRL &kp LALT &kp LGUI &kp C)
-                MACRO(macro_v, &kp LCTRL &kp LALT &kp LGUI &kp V)
-                MACRO(macro_b, &kp LCTRL &kp LALT &kp LGUI &kp B)
-                MACRO(macro_n, &kp LCTRL &kp LALT &kp LGUI &kp N)
-                MACRO(macro_m, &kp LCTRL &kp LALT &kp LGUI &kp M)
-                MACRO(macro_comma, &kp LCTRL &kp LALT &kp LGUI &kp COMMA)
-                MACRO(macro_dot, &kp LCTRL &kp LALT &kp LGUI &kp DOT)
+                MACRO(macro_s, S)
+                MACRO(macro_d, D)
+                MACRO(macro_f, F)
+                MACRO(macro_g, G)
+                MACRO(macro_z, Z)
+                MACRO(macro_x, X)
+                MACRO(macro_c, C)
+                MACRO(macro_v, V)
+                MACRO(macro_b, B)
+                MACRO(macro_n, N)
+                MACRO(macro_m, M)
+                MACRO(macro_comma, COMMA)
+                MACRO(macro_dot, DOT)
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
