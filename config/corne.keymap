@@ -90,6 +90,18 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 ;
                 };
                 MACRO(macro_s, &kp LCTRL &kp LALT &kp LGUI &kp S)
+                MACRO(macro_d, &kp LCTRL &kp LALT &kp LGUI &kp D)
+                MACRO(macro_f, &kp LCTRL &kp LALT &kp LGUI &kp F)
+                MACRO(macro_g, &kp LCTRL &kp LALT &kp LGUI &kp G)
+                MACRO(macro_z, &kp LCTRL &kp LALT &kp LGUI &kp Z)
+                MACRO(macro_x, &kp LCTRL &kp LALT &kp LGUI &kp X)
+                MACRO(macro_c, &kp LCTRL &kp LALT &kp LGUI &kp C)
+                MACRO(macro_v, &kp LCTRL &kp LALT &kp LGUI &kp V)
+                MACRO(macro_b, &kp LCTRL &kp LALT &kp LGUI &kp B)
+                MACRO(macro_n, &kp LCTRL &kp LALT &kp LGUI &kp N)
+                MACRO(macro_m, &kp LCTRL &kp LALT &kp LGUI &kp M)
+                MACRO(macro_comma, &kp LCTRL &kp LALT &kp LGUI &kp COMMA)
+                MACRO(macro_dot, &kp LCTRL &kp LALT &kp LGUI &kp DOT)
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
@@ -147,10 +159,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
   &kp ESC     &kp C_BRI_DN  &kp C_BRI_UP  &kp N3      &kp N4      &kp N5            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-  &kp ESC     &macro_a  &trans  &trans  &trans  &trans              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp RGUI &kp ESC
+  &kp ESC     &macro_a  &macro_s  &macro_d  &macro_f  &macro_g              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp RGUI &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &trans  &trans  &trans  &trans  &trans              &trans        &trans       &trans   &trans   &kp RSHFT &kp ESC
+  &kp ESC     &macro_z  &macro_x  &macro_c  &macro_v  &macro_b              &macro_n        &macro_m       &macro_comma   &macro_dot   &kp RSHFT &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
