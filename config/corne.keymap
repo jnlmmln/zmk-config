@@ -133,6 +133,11 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         key-positions = <20 21>;
                         bindings = <&kp RET>;
                 };
+                combo_caps_word {
+                        timeout-ms = <50>;
+                        key-positions = <25 26>;
+                        bindings = <&caps_word>;
+                };
                 combo_semi {
                         timeout-ms = <50>;
                         key-positions = <21 22>;
@@ -171,7 +176,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &mt LALT ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT BSPC  &mt LGUI &caps_word
+                          &mt LALT ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT BSPC  &mt LGUI DEL
                   >;
                 };
 
