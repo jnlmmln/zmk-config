@@ -106,6 +106,19 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
             then-layer = <BOTH>;
           };
         };
+        combos {
+                compatible = "zmk,combos";
+                combo_backspace {
+                        timeout-ms = <50>;
+                        key-positions = <2 3>;
+                        bindings = <kp BSPC>;
+                };
+                combo_enter {
+                        timeout-ms = <50>;
+                        key-positions = <14 15>;
+                        bindings = <kp RET>;
+                };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
