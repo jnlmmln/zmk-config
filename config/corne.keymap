@@ -110,13 +110,28 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 compatible = "zmk,combos";
                 combo_backspace {
                         timeout-ms = <50>;
-                        key-positions = <2 3>;
+                        key-positions = <8 9>;
                         bindings = <&kp BSPC>;
+                };
+                combo_delete {
+                        timeout-ms = <50>;
+                        key-positions = <8 9>;
+                        bindings = <&kp DEL>;
                 };
                 combo_enter {
                         timeout-ms = <50>;
-                        key-positions = <14 15>;
+                        key-positions = <20 21>;
                         bindings = <&kp RET>;
+                };
+                combo_semi {
+                        timeout-ms = <50>;
+                        key-positions = <21 22>;
+                        bindings = <&kp SEMI>;
+                };
+                combo_bslh {
+                        timeout-ms = <50>;
+                        key-positions = <33 34>;
+                        bindings = <&kp BSLH>;
                 };
         };
         keymap {
