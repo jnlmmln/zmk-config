@@ -144,6 +144,15 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         bindings = <&kp BSLH>;
                 };
         };
+        ht_bl: hold_tap_balanced {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOLD_TAP_BALANCED";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <200>;
+                bindings = <&kp>, <&kp>;
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -162,7 +171,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &mt LALT ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT BSPC  &mt LGUI &caps_word
+                          &mt LALT ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mt RSHFT BSPC  &mt LGUI DEL
                   >;
                 };
 
