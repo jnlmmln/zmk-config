@@ -127,7 +127,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         conditional_layers {
           compatible = "zmk,conditional-layers";
           both_layer {
-            if-layers = <SYMBOLS NUMBER>;
+            if-layers = <MODIFIER SYMBOLS>;
             then-layer = <TWO_MIDDLE>;
           };
         };
