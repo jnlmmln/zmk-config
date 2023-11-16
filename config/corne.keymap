@@ -173,7 +173,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         behaviors {
                 mo_sk: behavior_mo_sk {
                         compatible = "zmk,behavior-hold-tap";
-                        label = "MO_SK";
+                        label = "BEHAVIOR_MO_SK";
                         #binding-cells = <2>;
                         flavor = "balanced";
                         tapping-term-ms = <200>;
