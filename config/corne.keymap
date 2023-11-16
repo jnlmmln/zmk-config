@@ -22,11 +22,12 @@
 //              | 35 | 36 | 37 | | 38 | 39 | 40 |
 //              ╰────┴────┴────╯ ╰────┴────┴────╯
 
-#define DEFAULT   0
-#define LOWER     1
-#define RAISE     2
-#define BOTH      3
-// #define SYMBOLS   4
+#define DEFAULT    0
+#define CONTROL    1
+#define MODIFIER   2
+#define NAV        3
+#define SYMBOLS    4
+#define TWO_MIDDLE 5
 
 /* German umlauts */
 ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
@@ -63,8 +64,18 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 / {
         macros {
-                cut: cut {
-                        label = "ZM_cut";
+                cmd_z: cmd_z {
+                        label = "ZM_cmd_z";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp Z>
+                                , <&macro_release &kp LGUI>
+                                ;
+                };
+                cmd_x: cmd_x {
+                        label = "ZM_cmd_x";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -73,8 +84,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 , <&macro_release &kp LGUI>
                                 ;
                 };
-                copy: copy {
-                        label = "ZM_copy";
+                cmd_c: cmd_c {
+                        label = "ZM_cmd_c";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -83,8 +94,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 , <&macro_release &kp LGUI>
                                 ;
                 };
-                paste: paste {
-                        label = "ZM_paste";
+                cmd_v: cmd_v {
+                        label = "cmd_v";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -103,6 +114,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 MACRO(macro_c, C)
                 MACRO(macro_v, V)
                 MACRO(macro_b, B)
+                MACRO(macro_q, Q)
+                MACRO(macro_w, W)
                 MACRO(macro_e, E)
                 MACRO(macro_r, R)
                 MACRO(macro_t, T)
@@ -114,8 +127,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         conditional_layers {
           compatible = "zmk,conditional-layers";
           both_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <BOTH>;
+            if-layers = <SYMBOLS NUMBER>;
+            then-layer = <TWO_MIDDLE>;
           };
         };
         combos {
@@ -209,35 +222,15 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &mt LALT ESC &lt LOWER SPACE &mt LCTRL RET     &lt RAISE TAB  &mo_sk RAISE RSHFT  &mt LGUI CAPSLOCK
+                          &lt CONTROL ESC &lt MODIFIER SPACE &mt LCTRL RET     &lt NAV TAB  &mo_sk SYMBOLS RSHFT  &mt LGUI CAPSLOCK
                   >;
                 };
 
-                lower_layer {
+                control_layer {
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5            &kp N6      &kp N7      &kp N8      &kp N9      &kp N0 &kp ESC
-
-
-//  |     A     |     S     |     D     |     F     |     G     |     |     -/_   |     =/+   |     [/{   |     ]/}   |     ;/:   |
-  &kp ESC  &de_ae  &de_eszett  &de_oe  &de_ue  &euro_sign             &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp SEMI &kp ESC
-
-
-//  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &cut  &copy  &paste  &trans              &kp BSPC       &kp GRAVE       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
-
-
-//                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
-                                            &trans  &trans  &trans  &trans  &trans  &trans  
-                  >;
-                };
-
-                raise_layer {
-                  bindings = <
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-//  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &kp C_BRI_DN  &kp C_BRI_UP  &macro_e      &macro_r      &macro_t            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
+  &kp ESC     &macro_q  &macro_w  &macro_e      &macro_r      &macro_t            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
   &kp ESC     &macro_a  &macro_s  &macro_d  &macro_f  &macro_g              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp RGUI &kp ESC
@@ -250,7 +243,58 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                             >;
                 };
 
-                both_layer {
+                modifier_layer {
+                  bindings = <
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+//  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
+  &kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC            &kp COLON      &kp N7      &kp N8      &kp N9      &kp MINUS &kp ESC
+
+//  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
+  &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp N0   &kp N1   &kp N2    &kp N3    &kp EQUAL &kp ESC
+
+//  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
+  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp SLASH &kp ESC
+
+//                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
+                                            &trans  &trans  &trans  &trans  &trans  &trans  
+                                            >;
+                };
+
+                nav_layer {
+                  bindings = <
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+//  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
+  &kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
+
+//  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
+  &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT    &kp C_BRI_UP &kp ESC
+
+//  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
+  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp C_BRI_DN &kp ESC
+
+//                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
+                                            &trans  &trans  &trans  &trans  &trans  &trans  
+                                            >;
+                };
+
+                symbols_layer {
+                  bindings = <
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+//  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
+  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp BSLH &kp ESC
+
+//  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
+  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp EQUAL  &kp COLON   &kp UNDER    &kp MINUS    &kp SQT &kp ESC
+
+//  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
+  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp SHIFT              &PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
+
+//                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
+                                            &trans  &trans  &trans  &trans  &trans  &trans  
+                                            >;
+                };
+
+                two_middle_layer {
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
