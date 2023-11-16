@@ -265,6 +265,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
                   >;
+                };
 
                 symbols_layer {
                   bindings = <
