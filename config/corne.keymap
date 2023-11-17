@@ -260,39 +260,39 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //                                            >;
 //                };
 
-                nav_layer {
-                  bindings = <
+//                nav_layer {
+//                  bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
+//  &kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-  &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT    &kp C_BRI_UP &kp ESC
+//  &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT    &kp C_BRI_UP &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp C_BRI_DN &kp ESC
+//  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp C_BRI_DN &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
-                                            &trans  &trans  &trans  &trans  &trans  &trans  
-                                            >;
-                };
+//                                            &trans  &trans  &trans  &trans  &trans  &trans  
+//                                            >;
+//                };
 
-                symbols_layer {
-                  bindings = <
+//                symbols_layer {
+//                  bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp BSLH &kp ESC
+//  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp BSLH &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp EQUAL  &kp COLON   &kp UNDER    &kp MINUS    &kp SQT &kp ESC
+//  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp EQUAL  &kp COLON   &kp UNDER    &kp MINUS    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp SHIFT              &PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
+//  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp SHIFT              &PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
-                                            &trans  &trans  &trans  &trans  &trans  &trans  
-                                            >;
-                };
+//                                            &trans  &trans  &trans  &trans  &trans  &trans  
+//                                            >;
+//                };
 
                 two_middle_layer {
                   bindings = <
