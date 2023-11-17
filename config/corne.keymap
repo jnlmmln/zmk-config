@@ -243,22 +243,22 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                             >;
                 };
 
-//                modifier_layer {
-//                  bindings = <
+                modifier_layer {
+                  bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-//&kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC  &kp COLON      &kp N7      &kp N8      &kp N9      &kp MINUS &kp ESC
+&kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC  &kp COLON      &kp N7      &kp N8      &kp N9      &kp MINUS &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-//  &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp N0   &kp N1   &kp N2    &kp N3    &kp EQUAL &kp ESC
+  &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp N0   &kp N1   &kp N2    &kp N3    &kp EQUAL &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-//  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp SLASH &kp ESC
+  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp SLASH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
-//                                            &trans  &trans  &trans  &trans  &trans  &trans  
-//                                            >;
-//                };
+                                            &trans  &trans  &trans  &trans  &trans  &trans  
+                                            >;
+                };
 
 //                nav_layer {
 //                  bindings = <
@@ -277,22 +277,22 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //                                            >;
 //                };
 
-                symbols_layer {
-                  bindings = <
+//                symbols_layer {
+//                  bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp BSLH &kp ESC
+//  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp BSLH &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp EQUAL  &kp COLON   &kp UNDER    &kp MINUS    &kp SQT &kp ESC
+//  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp EQUAL  &kp COLON   &kp UNDER    &kp MINUS    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp SHIFT              &kp PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
+//  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp SHIFT              &kp PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
-                                            &trans  &trans  &trans  &trans  &trans  &trans  
-                                            >;
-                };
+//                                            &trans  &trans  &trans  &trans  &trans  &trans  
+//                                            >;
+//                };
 
                 two_middle_layer {
                   bindings = <
