@@ -135,7 +135,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 compatible = "zmk,combos";
                 combo_esc {
                         timeout-ms = <50>;
-                        key-positions = <1 2>;
+                        key-positions = <2 3>;
                         bindings = <&kp ESC>;
                 };
                 combo_backspace {
@@ -150,29 +150,34 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 };
                 combo_tab {
                         timeout-ms = <50>;
-                        key-positions = <13 14>;
+                        key-positions = <25 26>;
                         bindings = <&kp TAB>;
                 };
                 combo_enter {
                         timeout-ms = <50>;
-                        key-positions = <20 21>;
+                        key-positions = <31 32>;
                         bindings = <&kp RET>;
                 };
                 combo_caps_word {
                         timeout-ms = <50>;
-                        key-positions = <25 26>;
+                        key-positions = <24 25>;
                         bindings = <&caps_word>;
                 };
-                combo_semi {
+                combo_ctrl_a {
                         timeout-ms = <50>;
-                        key-positions = <21 22>;
-                        bindings = <&kp SEMI>;
+                        key-positions = <13 14>;
+                        bindings = <&kp LC(A)>;
                 };
-                combo_bslh {
-                        timeout-ms = <50>;
-                        key-positions = <33 34>;
-                        bindings = <&kp BSLH>;
-                };
+//                combo_semi {
+//                        timeout-ms = <50>;
+//                        key-positions = <21 22>;
+//                        bindings = <&kp SEMI>;
+//                };
+//                combo_bslh {
+//                        timeout-ms = <50>;
+//                        key-positions = <33 34>;
+//                        bindings = <&kp BSLH>;
+//                };
         };
         ht_bl: hold_tap_balanced {
                 compatible = "zmk,behavior-hold-tap";
