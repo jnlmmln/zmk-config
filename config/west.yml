@@ -3,8 +3,8 @@ manifest:
     - name: custom_zmkfirmware
       url-base: https://github.com/a-wark
   projects:
-    - name: custom_zmkfirmware
-      remote: zmk
+    - name: zmk
+      remote: custom_zmkfirmware
       revision: custom
       import: app/west.yml
   self:
