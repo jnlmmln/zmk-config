@@ -263,7 +263,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
   &kp ESC     &kp TAB  &kp LCTRL  &kp LALT      &kp LGUI  &kp RET              &kp N0   &kp N1   &kp N2    &kp N3    &kp EQUAL &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp SLASH &kp ESC
+  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp LSHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp SLASH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
@@ -280,7 +280,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //  &kp ESC     &kp TAB  &kp LCTRL  &kp LALT      &kp LGUI  &kp RET              &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT    &kp C_BRI_UP &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-//  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp SHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp C_BRI_DN &kp ESC
+//  &kp ESC     &cmd_z  &cmd_x  &cmd_c  &cmd_v  &kp LSHIFT              &trans        &kp N4       &kp N5   &kp N6   &kp C_BRI_DN &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
 //                                            &trans  &trans  &trans  &trans  &trans  &trans  
@@ -297,7 +297,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp EQUAL  &kp COLON   &kp UNDER    &kp MINUS    &kp SQT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-//  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp SHIFT              &kp PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
+//  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp LSHIFT              &kp PLUS        &kp SEMI       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
 //                                            &trans  &trans  &trans  &trans  &trans  &trans  
