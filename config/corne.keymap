@@ -247,7 +247,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC  &kp COLON      &kp N7      &kp N8      &kp N9      &kp MINUS &kp ESC
+
+&kp ESC     &kp ESC  &kp CTRL  &kp LALT      &kp LGUI     &kp BPSC  &kp COLON      &kp N7      &kp N8      &kp N9      &kp MINUS &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
   &kp ESC     &kp TAB  &kp CTRL  &kp LALT      &kp LGUI  &kp RET              &kp N0   &kp N1   &kp N2    &kp N3    &kp EQUAL &kp ESC
