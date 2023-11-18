@@ -133,6 +133,11 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         };
         combos {
                 compatible = "zmk,combos";
+                combo_qu {
+                        timeout-ms = <50>;
+                        key-positions = <1 2>;
+                        bindings = <&kp Q &kp U>;
+                };
                 combo_esc {
                         timeout-ms = <50>;
                         key-positions = <2 3>;
