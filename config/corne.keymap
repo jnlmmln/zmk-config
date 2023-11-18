@@ -308,7 +308,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp MINUS  &kp EQUAL    &kp COLON    &kp SEMI    &kp PERCENT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp LSHIFT              &kp UNDER        &kp PLUS       &kp COMMA   &kp DOT   &kp BLSH &kp ESC
+  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp LSHIFT              &kp UNDER        &kp PLUS       &kp COMMA   &kp DOT   &kp BSLH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
