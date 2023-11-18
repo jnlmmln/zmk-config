@@ -302,13 +302,13 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp BSLH &kp ESC
+  &kp ESC     &kp TILDE  &kp RBKT  &kp RBRC      &kp RPAR     &kp CARET            &kp DLLR      &kp AMPS      &kp STAR      &kp DQT      &kp PIPE &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
  &kp ESC     &kp GRAVE  &kp LBKT  &kp LBRC      &kp LPAR  &kp HASH              &kp MINUS  &kp EQUAL    &kp COLON    &kp SEMI    &kp PERCENT &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp LSHIFT              &kp UNDER        &kp PLUS       &kp COMMA   &kp DOT   &kp SLASH &kp ESC
+  &kp ESC     &kp EXCL  &kp AT  &kp LT  &kp GT  &kp LSHIFT              &kp UNDER        &kp PLUS       &kp COMMA   &kp DOT   &kp BLSH &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
