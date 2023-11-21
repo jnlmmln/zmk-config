@@ -24,10 +24,11 @@
 
 #define DEFAULT    0
 #define CONTROL    1
-#define MODIFIER   2
+#define MOD_LEFT   2
 #define NAV        3
 #define SYMBOLS    4
-#define TWO_MIDDLE 5
+#define MOD_RIGHT  5
+#define TWO_MIDDLE 6
 
 /* German umlauts */
 ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
@@ -127,7 +128,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         conditional_layers {
           compatible = "zmk,conditional-layers";
           both_layer {
-            if-layers = <MODIFIER SYMBOLS>;
+            if-layers = <MOD_LEFT SYMBOLS>;
             then-layer = <TWO_MIDDLE>;
           };
         };
@@ -222,7 +223,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //      ├────┼────┼────┼────┼────┤ ├────┼────┼────┼────┼────┤
 // NONE |  Z |  X |  C |  V |  B | |  N |  M | , <| . >| / ?| NONE
 //      ╰────┴────┼────┼────┼────┤ ├────┼────┼────┼────┴────╯
-//                | 35 | 36 | 37 | | 38 | 39 | 40 |
+//                |    |    |    | |    |    |    |
 //                ╰────┴────┴────╯ ╰────┴────┴────╯
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -238,7 +239,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/SPC  |     | SHIFT/ENT| RIGHT/TAB |  CMD/DEL  |
-                          &lt CONTROL ESC &lt MODIFIER SPACE &mt LCTRL RET     &lt NAV TAB  &mo_sk SYMBOLS RSHFT  &mt LGUI CAPSLOCK
+                          &lt CONTROL ESC &lt MOD_LEFT SPACE &mt LCTRL RET     &lt NAV TAB  &mo_sk SYMBOLS RSHFT  &lt MOD_RIGHT CAPSLOCK
                   >;
                 };
 
@@ -259,10 +260,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                             >;
                 };
 
-                modifier_layer {
+                modifier_left_layer {
                   bindings = <
 //      ╭─────────┬─────────┬─────────┬─────────┬─────────╮ ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-// NONE | ESC     | CTRL    | ALT     | GUI     | BSPC    | | 6       | 7       | 8       | 9       | 5       | NONE
+// NONE | ESC     | CTRL A  |         |         | BSPC    | | 6       | 7       | 8       | 9       | 5       | NONE
 //      ├─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // NONE | TAB     | OS CTRL | OS ALT  | OS GUI  | RET     | | 0       | 1       | 2       | 3       | 4       | NONE
 //      ├─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┤
@@ -273,7 +274,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-&kp ESC      &kp ESC       &kp LCTRL       &kp LALT       &kp LGUI       &kp BSPC             &kp N6       &kp N7       &kp N8       &kp N9       &kp N5 &kp ESC
+&kp ESC      &kp ESC       &kp LC(A)       &trans       &trans       &kp BSPC             &kp N6       &kp N7       &kp N8       &kp N9       &kp N5 &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
   &kp ESC     &kp TAB  &sk LCTRL  &sk LALT      &sk LGUI  &kp RET              &kp N0   &kp N1   &kp N2    &kp N3    &kp N4 &kp ESC
@@ -320,6 +321,26 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                             >;
                 };
 
+                modifier_right_layer {
+                  bindings = <
+//      ╭─────────┬─────────┬─────────┬─────────┬─────────╮ ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+// NONE |         |         |         |         |         | |         |         |CAPS_WORD|CAPS_LOCK|         | NONE
+//      ├─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┤
+// NONE |         |         |         |         |         | |         | OS GUI  | OS ALT  | OS CTRL |         | NONE
+//      ├─────────┼─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┼─────────┤
+// NONE |         |         |         |         |         | | SHIFT   |         |         |         |         | NONE
+//      ╰─────────┴─────────┼─────────┼─────────┼─────────┤ ├─────────┼─────────┼─────────┼─────────┴─────────╯
+//                          |         |         |         | |         |         |         |
+//                          ╰─────────┴─────────┴─────────╯ ╰─────────┴─────────┴─────────╯
+
+
+&kp ESC   &trans   &trans   &trans   &trans   &trans             &trans       &trans     &caps_word   &kp CAPSLOCK   &trans   &kp ESC
+&kp ESC   &trans   &trans   &trans   &trans   &trans             &kp N0       &kp LGUI   &kp LALT     &kp LCTRL      &trans   &kp ESC
+&kp ESC   &trans   &trans   &trans   &trans   &trans             &kp RSHIFT   &trans     &trans       &trans         &trans   &kp ESC
+                            &trans   &trans   &trans             &trans       &trans     &trans  
+                                            >;
+                };
+
                 two_middle_layer {
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -330,7 +351,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
   &kp ESC  &de_ae &de_eszett &de_ue &de_oe &trans             &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &trans &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
-  &kp ESC     &trans  &trans  &trans  &trans  &trans              &trans        &trans       &trans   &trans   &trans &kp ESC
+  &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp RSHIFT        &trans       &trans   &trans   &trans &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
