@@ -335,7 +335,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 
 &kp ESC   &trans   &trans   &trans   &trans   &trans             &trans       &trans     &caps_word   &kp CAPSLOCK   &trans   &kp ESC
-&kp ESC   &trans   &trans   &trans   &trans   &trans             &kp N0       &kp LGUI   &kp LALT     &kp LCTRL      &trans   &kp ESC
+&kp ESC   &trans   &trans   &trans   &trans   &trans             &kp N0       &sk LGUI   &sk LALT     &sk LCTRL      &trans   &kp ESC
 &kp ESC   &trans   &trans   &trans   &trans   &trans             &kp RSHIFT   &trans     &trans       &trans         &trans   &kp ESC
                             &trans   &trans   &trans             &trans       &trans     &trans  
                                             >;
