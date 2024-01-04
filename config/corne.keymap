@@ -348,7 +348,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
    &kp ESC    &trans  &trans  &trans      &trans      &trans            &trans      &trans      &trans      &trans      &trans &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-  &kp ESC  &de_ae &de_eszett &de_ue &de_oe &trans             &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &trans &kp ESC
+  &kp ESC  &de_ae &de_eszett &de_ue &de_oe &euro_sign             &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &trans &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     `/~   |     \/"|" |
   &kp ESC     &trans  &trans  &trans  &trans  &trans              &kp RSHIFT        &trans       &trans   &trans   &trans &kp ESC
