@@ -120,10 +120,21 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 MACRO(macro_e, E)
                 MACRO(macro_r, R)
                 MACRO(macro_t, T)
+                MACRO(macro_y, Y)
+                MACRO(macro_u, U)
+                MACRO(macro_i, I)
+                MACRO(macro_o, O)
+                MACRO(macro_p, P)
+                MACRO(macro_h, H)
+                MACRO(macro_j, J)
+                MACRO(macro_k, K)
+                MACRO(macro_l, L)
+                MACRO(macro_single_quote, SINGLE_QUOTE)
                 MACRO(macro_n, N)
                 MACRO(macro_m, M)
                 MACRO(macro_comma, COMMA)
                 MACRO(macro_dot, DOT)
+                MACRO(macro_slash, SLASH)
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
@@ -247,13 +258,13 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                   bindings = <
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 //  |     1     |     2     |     3     |     4     |     5     |     |     6     |     7     |     8     |     9     |     0     |
-  &kp ESC     &macro_q  &macro_w  &macro_e      &macro_r      &macro_t            &kp C_PREV      &kp C_PP      &kp C_NEXT      &kp C_VOL_DN      &kp C_VOL_UP &kp ESC
+  &kp ESC     &macro_q  &macro_w  &macro_e      &macro_r      &macro_t            &macro_y      &macro_u      &macro_i      &macro_o     &macro_p &kp ESC
 
 //  |     Ae     |     Se     |     Oe     |     Ue     |     G     |     |     LEFT   |     DOWN   |     UP   |     RIGHT   |     '/"   |
-  &kp ESC     &macro_a  &macro_s  &macro_d  &macro_f  &swap_window              &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT    &kp RGUI &kp ESC
+  &kp ESC     &macro_a  &macro_s  &macro_d  &macro_f  &swap_window              &macro_h   &macro_j   &macro_k    &macro_l    &macro_single_quote &kp ESC
 
 //  |     Z     |     X     |     C     |     V     |     B     |     |     N     |     M     |     ,     |     .   |     \/"|" |
-  &kp ESC     &macro_z  &macro_x  &macro_c  &macro_v  &macro_b              &macro_n        &macro_m       &macro_comma   &macro_dot   &kp RSHFT &kp ESC
+  &kp ESC     &macro_z  &macro_x  &macro_c  &macro_v  &macro_b              &macro_n        &macro_m       &macro_comma   &macro_dot   &macro_slash &kp ESC
 
 //                          |  ALT/ESC  | LEFT/BKSP | CTRL/ENT  |     | SHIFT/SPC | RIGHT/TAB |  CMD/DEL  |
                                             &trans  &trans  &trans  &trans  &trans  &trans  
