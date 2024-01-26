@@ -201,6 +201,15 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 bindings = <&kp>, <&kp>;
         };
         behaviors {
+                skq: behavior_sk_quick_release {
+                        compatible = "zmk,behavior-sticky-key";
+                        label = "BEHAVIOR_SKQ";
+                        #binding-cells = <1>;
+                        bindings = <&kp>;
+                        release-after-ms = <1000>;
+                        quick-release;
+                        ignore-modifiers;
+                };
                 mo_sk: behavior_mo_sk {
                         compatible = "zmk,behavior-hold-tap";
                         label = "BEHAVIOR_MO_SK";
@@ -208,7 +217,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         flavor = "balanced";
                         tapping-term-ms = <200>;
                         quick-tap-ms = <200>;
-                        bindings = <&mo>, <&sk>;
+                        bindings = <&mo>, <&skq>;
                 };
                 swap_window: swap_window {
                         compatible = "zmk,behavior-tri-state";
