@@ -67,7 +67,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         macros {
                 macro_jk: macro_jk {
                         label = "ZM_macro_jk";
-                        comatible = "zmk,behavior-macro";
+                        compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_tap &kp J>
