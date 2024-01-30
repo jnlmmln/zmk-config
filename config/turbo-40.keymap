@@ -1,4 +1,4 @@
-/*
+s/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -255,7 +255,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                     &kp Q     &kp W     &kp F             &kp P               &kp B               &kp J         &kp L                 &kp U                   &kp Y     &kp SQT
                     &kp A     &kp R     &kp S             &kp T               &kp G               &kp M         &kp N                 &kp E                   &kp I     &kp O
                     &kp Z     &kp X     &kp C             &kp D               &kp V               &kp K         &kp H                 &kp COMMA               &kp DOT   &kp FSLH
-                    &kp ESC   &kp TAB   &lt CONTROL ESC   &lt MOD_LEFT SPACE  &mt LCTRL RET       &lt NAV TAB   &mo_sk SYMBOLS RSHFT  &lt MOD_RIGHT CAPSLOCK  &kp LGUI  &macro_jk
+                    &kp ESC   &kp TAB   &lt CONTROL ESC   &lt MOD_LEFT SPACE  &mt LCTRL RET       &lt NAV TAB   &mo_sk SYMBOLS RSHFT  &lt MOD_RIGHT macro_jk  &kp LGUI  &macro_jk
 
                   >;
                 };
