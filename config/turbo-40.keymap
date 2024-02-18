@@ -65,6 +65,15 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 / {
         macros {
+                macro_jk: macro_jk {
+                        label = "ZM_macro_jk";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_tap &kp J>
+                                , <&macro_tap &kp K>
+                                ;
+                };
                 cmd_z: cmd_z {
                         label = "ZM_cmd_z";
                         compatible = "zmk,behavior-macro";
@@ -234,7 +243,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                   bindings = <
 // colemak dh layout
 //    ╭────┬────┬────┬────┬────╮ ╭────┬────┬────┬────┬────╮
-//    |  Q |  W |  F |  P |  B | |  J |  L |  U |  Y |  ; |
+//    |  Q |  W |  F |  P |  B | |  J |  L |  U |  Y |  ' |
 //    ├────┼────┼────┼────┼────┤ ├────┼────┼────┼────┼────┤
 //    |  A |  R |  S |  T |  G | |  M |  N |  E |  I |  O |
 //    ├────┼────┼────┼────┼────┤ ├────┼────┼────┼────┼────┤
@@ -246,7 +255,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                     &kp Q     &kp W     &kp F             &kp P               &kp B               &kp J         &kp L                 &kp U                   &kp Y     &kp SQT
                     &kp A     &kp R     &kp S             &kp T               &kp G               &kp M         &kp N                 &kp E                   &kp I     &kp O
                     &kp Z     &kp X     &kp C             &kp D               &kp V               &kp K         &kp H                 &kp COMMA               &kp DOT   &kp FSLH
-                    &kp ESC   &kp TAB   &lt CONTROL ESC   &lt MOD_LEFT SPACE  &mt LCTRL RET       &lt NAV TAB   &mo_sk SYMBOLS RSHFT  &lt MOD_RIGHT CAPSLOCK  &kp LGUI  &kp LALT
+                    &kp ESC   &kp TAB   &lt CONTROL ESC   &lt MOD_LEFT SPACE  &mt LCTRL RET       &lt NAV TAB   &mo_sk SYMBOLS RSHFT  &lt MOD_RIGHT ESC  &kp LGUI  &macro_jk
 
                   >;
                 };
@@ -254,7 +263,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 control_layer {
                   bindings = <
                     &macro_q  &macro_w  &macro_f  &macro_p  &macro_b      &macro_j  &macro_l  &macro_u      &macro_y    &macro_semi
-                    &macro_a  &macro_r  &macro_s  &macro_t  &macro_g      &macro_m  &macro_n  &macro_e      &macro_i    &macro_o
+                    &macro_a  &macro_r  &macro_s  &macro_t  &swap_window      &macro_m  &macro_n  &macro_e      &macro_i    &macro_o
                     &macro_z  &macro_x  &macro_c  &macro_d  &macro_v      &macro_k  &macro_h  &macro_comma  &macro_dot  &macro_slash
                     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans        &trans      &trans
                   >;
@@ -320,7 +329,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 two_middle_layer {
                   bindings = <
                     &trans  &trans      &trans  &trans  &trans        &trans      &trans        &trans        &trans        &trans
-                    &de_ae  &de_eszett  &de_ue  &de_oe  &euro_sign    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans
+                    &de_ae  &de_oe  &de_eszett  &de_ue  &euro_sign    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans
                     &trans  &trans      &trans  &trans  &trans        &kp RSHIFT  &trans        &trans        &trans        &trans
                     &trans  &trans      &trans  &trans  &trans        &trans      &trans        &trans        &trans        &trans  
                   >;
