@@ -158,10 +158,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 MACRO(macro_dot, DOT)
                 MACRO(macro_slash, SLASH)
 
-                SHFT_CMD_MACRO(shft_cmd_k, k)
-                SHFT_CMD_MACRO(shft_cmd_o, o)
-                SHFT_CMD_MACRO(shft_cmd_m, m)
-                SHFT_CMD_MACRO(shft_cmd_e, e)
+                SHFT_CMD_MACRO(shft_cmd_k, K)
+                SHFT_CMD_MACRO(shft_cmd_o, O)
+                SHFT_CMD_MACRO(shft_cmd_m, M)
+                SHFT_CMD_MACRO(shft_cmd_e, E)
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
