@@ -64,7 +64,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
     };
 
 #define SHFT_CMD_MACRO(name, key)          \
-    name: name_shft_cmd_macro {                   \
+    name: name##_shft_cmd_macro {                   \
         label = #name;                     \
         compatible = "zmk,behavior-macro"; \
         wait-ms = <1>;                     \
