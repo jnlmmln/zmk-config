@@ -158,10 +158,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 MACRO(macro_dot, DOT)
                 MACRO(macro_slash, SLASH)
 
-                SHFT_CMD_MACRO(shft_cmd_k, K)
-                SHFT_CMD_MACRO(shft_cmd_o, O)
-                SHFT_CMD_MACRO(shft_cmd_m, M)
-                SHFT_CMD_MACRO(shft_cmd_e, E)
+                SHFT_CMD_MACRO(shft_cmd_k, K) // raise / lower hand in teams calls
+                SHFT_CMD_MACRO(shft_cmd_o, O) // enable / disable camera in teams calls
+                SHFT_CMD_MACRO(shft_cmd_m, M) // mute / unmute mic in teams calls
+                SHFT_CMD_MACRO(shft_cmd_e, E) // share screen in teams calls
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
