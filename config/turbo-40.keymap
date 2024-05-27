@@ -307,7 +307,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
                     &kp ESC   &kp LC(A)   &trans    &trans      &kp BSPC     &kp N6    &kp N7  &kp N8      &kp N9     &kp COLON
                     &kp TAB   &sk LCTRL   &sk LALT  &sk LGUI    &kp RET      &kp N5    &kp N1  &kp N2      &kp N3     &kp N4
-                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v       &kp EQUAL &kp N0  &kp COMMA   &kp DOT    &kp SLASH
+                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v       &kp LC(A) &kp N0  &kp COMMA   &kp DOT    &kp SLASH
                     &trans    &trans      &trans    &trans      &trans       &trans    &trans  &kp MINUS   &kp COLON  &trans 
                   >;
                 };
