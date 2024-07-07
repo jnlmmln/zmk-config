@@ -51,7 +51,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 ; \
         };
 
-#define MACRO(name, key)                  \
+#define MACRO(name, key)                   \
     name: name##_macro {                   \
         label = #name;                     \
         compatible = "zmk,behavior-macro"; \
@@ -61,6 +61,18 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
         bindings = <&macro_press &kp LCTRL &kp LALT &kp LGUI> \
                 , <&macro_tap &kp key> \
                 , <&macro_release &kp LCTRL &kp LALT &kp LGUI> ; \
+    };
+
+#define SHFT_CMD_MACRO(name, key)          \
+    name: name##_shft_cmd_macro {                   \
+        label = #name;                     \
+        compatible = "zmk,behavior-macro"; \
+        wait-ms = <1>;                     \
+        tap-ms = <1>;                      \
+        #binding-cells = <0>;              \
+        bindings = <&macro_press &kp LSHFT &kp LGUI> \
+                , <&macro_tap &kp key> \
+                , <&macro_release &kp LSHFT &kp LGUI> ; \
     };
 
 / {
@@ -145,6 +157,11 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 MACRO(macro_comma, COMMA)
                 MACRO(macro_dot, DOT)
                 MACRO(macro_slash, SLASH)
+
+                SHFT_CMD_MACRO(shft_cmd_k, K) // raise / lower hand in teams calls
+                SHFT_CMD_MACRO(shft_cmd_o, O) // enable / disable camera in teams calls
+                SHFT_CMD_MACRO(shft_cmd_m, M) // mute / unmute mic in teams calls
+                SHFT_CMD_MACRO(shft_cmd_e, E) // share screen in teams calls
         };
         conditional_layers {
           compatible = "zmk,conditional-layers";
@@ -290,7 +307,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
                     &kp ESC   &kp LC(A)   &trans    &trans      &kp BSPC     &kp N6    &kp N7  &kp N8      &kp N9     &kp COLON
                     &kp TAB   &sk LCTRL   &sk LALT  &sk LGUI    &kp RET      &kp N5    &kp N1  &kp N2      &kp N3     &kp N4
-                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v       &kp EQUAL &kp N0  &kp COMMA   &kp DOT    &kp SLASH
+                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v       &kp LC(A) &kp N0  &kp COMMA   &kp DOT    &kp SLASH
                     &trans    &trans      &trans    &trans      &trans       &trans    &trans  &kp MINUS   &kp COLON  &trans 
                   >;
                 };
@@ -299,7 +316,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                   bindings = <
                     &kp ESC   &kp LCTRL   &kp LALT  &kp LGUI    &kp BSPC      &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP
                     &kp TAB   &sk LCTRL   &sk LALT  &sk LGUI    &kp RET       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT     &kp C_BRI_UP
-                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v        &trans      &trans      &trans      &trans        &kp C_BRI_DN
+                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v        &shft_cmd_k &shft_cmd_o &shft_cmd_m &shft_cmd_e   &kp C_BRI_DN
                     &trans    &trans      &trans    &trans      &trans        &trans      &trans      &trans      &trans        &trans  
                   >;
                 };
