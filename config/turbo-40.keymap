@@ -228,6 +228,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 bindings = <&kp>, <&kp>;
         };
         behaviors {
+                &lt {
+                        tapping-term-ms = <200>;
+                        require-prior-idle-ms = <125>;
+                };
                 skq: behavior_sk_quick_release {
                         compatible = "zmk,behavior-sticky-key";
                         label = "BEHAVIOR_SKQ";
