@@ -228,7 +228,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 bindings = <&kp>, <&kp>;
         };
         behaviors {
-                &lt {
+                lt: behaviour_lt {
                         tapping-term-ms = <200>;
                         require-prior-idle-ms = <125>;
                 };
