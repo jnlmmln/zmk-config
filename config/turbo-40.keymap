@@ -75,6 +75,12 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 , <&macro_release &kp LSHFT &kp LGUI> ; \
     };
 
+
+  &lt {
+    tapping-term-ms = <200>;
+    require-prior-idle-ms = <125>;
+  };
+
 / {
         macros {
                 macro_jk: macro_jk {
@@ -228,10 +234,6 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 bindings = <&kp>, <&kp>;
         };
         behaviors {
-                lt_idle: behaviour_lt {
-                        tapping-term-ms = <200>;
-                        require-prior-idle-ms = <125>;
-                };
                 skq: behavior_sk_quick_release {
                         compatible = "zmk,behavior-sticky-key";
                         label = "BEHAVIOR_SKQ";
