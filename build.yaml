@@ -14,4 +14,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: turbo-40 nice_view_adapter nice_view
+    shield: w-40 nice_view_adapter nice_view
