@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: custom_zmkfirmware
       url-base: https://github.com/a-wark
+    - name: tri-state
+      url-base: https://github.com/dhruvinsh
   projects:
     - name: zmk
       remote: custom_zmkfirmware
       revision: studio
       import: app/west.yml
+    - name: zmk-tri-state
+      remote: tri-state
+      revision: main
   self:
     path: config
