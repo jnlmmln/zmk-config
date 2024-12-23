@@ -246,6 +246,12 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         quick-tap-ms = <200>;
                         bindings = <&mo>, <&skq>;
                 };
+                swap_window: swap_window {
+                        compatible = "zmk,behavior-tri-state";
+                        label = "SWAPPER";
+                        #binding-cells = <0>;
+                        bindings = <&kt LALT>, <&kp N>, <&kt LALT>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -281,7 +287,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 control_layer {
                   bindings = <
                     &macro_q  &macro_w  &macro_f  &macro_p  &macro_b      &macro_j  &macro_l  &macro_u      &macro_y    &macro_semi
-                    &macro_a  &macro_r  &macro_s  &macro_t  &macro_g      &macro_m  &macro_n  &macro_e      &macro_i    &macro_o
+                    &macro_a  &macro_r  &macro_s  &macro_t  &swap_window  &macro_m  &macro_n  &macro_e      &macro_i    &macro_o
                     &macro_z  &macro_x  &macro_c  &macro_d  &macro_v      &macro_k  &macro_h  &macro_comma  &macro_dot  &macro_slash
                     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans        &trans      &trans
                   >;
