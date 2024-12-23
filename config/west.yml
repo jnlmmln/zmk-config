@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: custom_zmkfirmware
-      revision: custom-studio-synced
+      revision: studio
       import: app/west.yml
   self:
     path: config
