@@ -252,6 +252,12 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         #binding-cells = <0>;
                         bindings = <&kt LALT>, <&kp N>, <&kt LALT>;
                 };
+                ctrl_tab: ctrl_tab {
+                        compatible = "zmk,behavior-tri-state";
+                        label = "SWAPPER";
+                        #binding-cells = <0>;
+                        bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -305,10 +311,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                     //      |         |         |         |         |         | |         |         | - _     | :       |         |
                     //      ╰─────────┴─────────┴─────────────────────────────╯ ╰─────────────────────────────┴─────────┴─────────╯
 
-                    &kp ESC   &kp LC(A)   &trans    &trans      &kp BSPC     &kp N6    &kp N7  &kp N8      &kp N9     &kp COLON
-                    &kp TAB   &sk LCTRL   &sk LALT  &sk LGUI    &kp RET      &kp N5    &kp N1  &kp N2      &kp N3     &kp N4
-                    &cmd_z    &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v       &kp LC(A) &kp N0  &kp COMMA   &kp DOT    &kp SLASH
-                    &trans    &trans      &trans    &trans      &trans       &trans    &trans  &kp MINUS   &kp COLON  &trans 
+                    &kp ESC     &kp LC(A)   &trans    &trans      &kp BSPC     &kp N6      &kp N7  &kp N8      &kp N9     &kp COLON
+                    &ctrl_tab   &sk LCTRL   &sk LALT  &sk LGUI    &kp RET      &kp N5      &kp N1  &kp N2      &kp N3     &kp N4
+                    &cmd_z      &cmd_x      &cmd_c    &kp LSHIFT  &cmd_v       &kp LC(A)   &kp N0  &kp COMMA   &kp DOT    &kp SLASH
+                    &trans      &trans      &trans    &trans      &trans       &kp SPACE   &trans  &kp MINUS   &kp COLON  &trans 
                   >;
                 };
 
@@ -343,19 +349,19 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 //                          ╰─────────┴─────────┴─────────╯ ╰─────────┴─────────┴─────────╯
 
 
-                    &trans   &trans   &trans   &trans   &trans     &trans       &trans     &caps_word   &kp CAPSLOCK   &trans
-                    &trans   &trans   &trans   &trans   &trans     &kp N0       &sk LGUI   &sk LALT     &sk LCTRL      &trans
-                    &trans   &trans   &trans   &trans   &trans     &kp RSHIFT   &trans     &trans       &trans         &trans
-                    &trans   &trans   &trans   &trans   &trans     &trans       &trans     &trans       &trans         &trans
+                    &trans   &trans   &trans       &trans   &trans         &trans       &trans     &caps_word   &kp CAPSLOCK   &trans
+                    &de_ae   &de_oe   &de_eszett   &de_ue   &euro_sign     &trans       &sk LGUI   &sk LALT     &sk LCTRL      &sk TAB
+                    &trans   &trans   &trans       &trans   &trans         &kp RSHIFT   &trans     &trans       &trans         &trans
+                    &trans   &trans   &trans       &trans   &trans         &trans       &trans     &trans       &trans         &trans
                   >;
                 };
 
                 two_middle_layer {
                   bindings = <
-                    &trans  &trans      &trans  &trans  &trans        &bootloader      &studio_unlock        &trans        &trans        &trans
-                    &de_ae  &de_oe  &de_eszett  &de_ue  &euro_sign    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans
-                    &trans  &trans      &trans  &trans  &trans        &kp RSHIFT  &trans        &trans        &trans        &trans
-                    &trans  &trans      &trans  &trans  &trans        &trans      &trans        &trans        &trans        &trans  
+                    &trans  &trans      &trans  &trans  &trans        &bootloader   &studio_unlock  &trans        &trans        &trans
+                    &de_ae  &de_oe  &de_eszett  &de_ue  &euro_sign    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &trans
+                    &trans  &trans      &trans  &trans  &trans        &kp RSHIFT    &trans          &trans        &trans        &trans
+                    &trans  &trans      &trans  &trans  &trans        &trans        &trans          &trans        &trans        &trans  
                   >;
                 };
         };
