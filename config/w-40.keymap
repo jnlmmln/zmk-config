@@ -254,7 +254,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 };
                 ctrl_tab: ctrl_tab {
                         compatible = "zmk,behavior-tri-state";
-                        label = "SWAPPER";
+                        label = "CTRL_TAB";
                         #binding-cells = <0>;
                         bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
                 };
