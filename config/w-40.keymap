@@ -160,7 +160,7 @@
         // Nav layer
         nav_layer {
             bindings = <
-                &kp ESC      &trans       &trans       &trans       &trans       &kp LC(Y)    &kp LC(R)    &kp LC(C)    &kp LC(X)    &kp LC(Z)
+                &kp ESC      &trans       &trans       &trans       &trans       &kp LC(Y)    &kp LC(V)    &kp LC(C)    &kp LC(X)    &kp LC(Z)
                 &sk LGUI     &sk LALT     &sk LCTRL    &sk LSHFT    &trans       &kp CAPS     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT
                 &trans       &trans       &trans       &trans       &trans       &kp INS      &kp HOME     &kp PG_DN    &kp PG_UP    &kp END
                 &trans       &trans       &trans       &trans       &trans       &kp ENTER    &kp BSPC     &kp DEL      &trans       &trans
@@ -203,7 +203,7 @@
                 &kp LBRC     &kp AMPS     &kp STAR     &kp LPAR     &kp RBRC     &none        &none        &none        &none        &none
                 &kp COLON    &kp DLLR     &kp PRCNT    &kp CARET    &kp PLUS     &none        &sk RSHFT    &sk RCTRL    &sk RALT     &sk RGUI
                 &kp TILDE    &kp EXCL     &kp AT       &kp HASH     &kp PIPE     &none        &none        &none        &none        &none
-                &kp LPAR     &kp RPAR     &kp LPAR     &kp RPAR     &trans       &trans       &trans       &trans       &trans       &trans
+                &kp LPAR     &kp RPAR     &kp LPAR     &kp RPAR     &kp UNDER    &trans       &trans       &trans       &trans       &trans
             >;
         };
 
