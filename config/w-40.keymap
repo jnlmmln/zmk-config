@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors/unicode.dtsi>
+#include "../helper.h"
+#include "../international_chars/german.dtsi"
+
+#define HOST_OS 1                                /* Use Linux input system */
 
 #define BASE 0
 #define NAV  1
@@ -29,6 +34,10 @@
 // Miryoku key aliases
 #define U_MT(MOD, TAP) &mt MOD TAP
 #define U_LT(LAYER, TAP) &lt LAYER TAP
+
+&uc {
+  default-mode = <UC_MODE_LINUX>;                /* Default to Linux input system */
+};
 
 // w-40 physical layout:
 // ╭────┬────┬────┬────┬────╮ ╭────┬────┬────┬────┬────╮
@@ -170,10 +179,10 @@
         // Mouse layer
         mouse_layer {
             bindings = <
-                &none        &none        &none        &none        &none        &none        &bootloader   &studio_unlock  &none         &none
-                &sk LGUI     &sk LALT     &sk LCTRL    &sk LSHFT    &none        &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &none
-                &none        &none        &none        &none        &none        &none        &none         &none           &none         &none
-                &trans       &trans       &trans       &trans       &trans       &none        &none         &none           &trans        &trans
+                &none        &none        &none        &none          &none           &none        &bootloader   &studio_unlock  &none         &none
+                &uc UC_DE_AE &uc UC_DE_OE &uc UC_DE_UE &de_eszett     &euro_sign      &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &none
+                &de_ae       &de_oe       &de_ue       &de_eszett     &euro_sign      &none        &none         &none           &none         &none
+                &trans       &trans       &trans       &trans         &trans          &none        &none         &none           &trans        &trans
             >;
         };
 

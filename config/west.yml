@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/a-wark
     - name: tri-state
       url-base: https://github.com/dhruvinsh
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: custom_zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: zmk-tri-state
       remote: tri-state
       revision: main
+    - name: zmk-unicode
+      remote: urob
+      revision: v0.3 # set to same as ZMK version above
   self:
     path: config
